@@ -3,9 +3,13 @@
 ### Prerequisites
 ```
 1. Java 8 or further versions
+
 2. Elastic Search 
+
 3. Data indexed into the Elastic search with appropriate name.
+
 4. Spring tool suite (IDE if requires)
+
 5. Postman (For Api testing purpose)
 ```
  
@@ -13,13 +17,21 @@
 
 ````
 1. Take the pull from the git repo.
+
 2. Add elastic search index name in the application.properties file. (Location: src/main/resources)
+
 3. If STS is available, open the import maven project wizard and import the same project.
+
 4. If using plain MVN, then
+
     1. Go to the project location and execute following command to build the project
+
         mvn clean install
+
     2. To run the project enter the following command.
+
         mvn spring-boot:run
+
 5. Project will be running on port 8080.
 ````
 
@@ -28,7 +40,9 @@
 #### 1.Query API 
 ````
 1. URL : http://localhost:8080/api/query
+
 2. HTTP Method : POST
+
 3. Request Body:
     {
         "queries":[{
@@ -41,7 +55,9 @@
         "limit":150,
         "queryString":""
     }
+
 4. Response: 
+
     {
     "statusCode": 200, // Status code
     "message": "Query Executed Successfully", // Success Message
@@ -77,8 +93,11 @@
 
 ````
 1. URL : http://localhost:8080/api/jsonquery
+
 2. HTTP Method: POST
+
 3. Request Body:
+
 {
     "queries":[
     ],
